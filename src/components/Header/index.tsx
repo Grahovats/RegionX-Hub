@@ -50,15 +50,24 @@ const Header: React.FC<HeaderProps> = ({ theme, setTheme, openRpcModal }) => {
             <div className={styles.burgerIcon} onClick={toggleMenu}>
               ☰
             </div>
-            <Image
-              src={theme === 'dark' ? '/WhiteLogo.png' : '/DarkLogo.png'}
-              alt='Logo'
-              className={styles.logo}
-              width={1229}
-              height={782}
-              onClick={() => handleNavigation('/')}
-              priority
-            />
+            <div className={styles.brandCluster}>
+              <button
+                className={styles.mobileBell}
+                aria-label='Open activity'
+                onClick={() => setActivityOpen(true)}
+              >
+                <Bell size={18} />
+              </button>
+              <Image
+                src={theme === 'dark' ? '/WhiteLogo.png' : '/DarkLogo.png'}
+                alt='Logo'
+                className={styles.logo}
+                width={1229}
+                height={782}
+                onClick={() => handleNavigation('/')}
+                priority
+              />
+            </div>
           </div>
 
           <div
@@ -107,7 +116,6 @@ const Header: React.FC<HeaderProps> = ({ theme, setTheme, openRpcModal }) => {
         </div>
 
         <div className={styles.desktopContent}>
-          {/* Bell – left of NetworkSelector */}
           <button
             className={styles.iconBtn}
             aria-label='Open activity'
