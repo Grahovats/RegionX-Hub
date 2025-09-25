@@ -47,7 +47,7 @@
   }
 
   @media (max-width: 600px) {
-    width: 100vw;
+    width: 90vw;
     max-width: 100vw;
     border-left: none;
     border-top-left-radius: 16px;
@@ -97,7 +97,7 @@
   color: var(--text-primary);
 
   @media (max-width: 420px) {
-    width: 28px;
+    min-width: 28px;
     height: 28px;
     border-radius: 8px;
   }
